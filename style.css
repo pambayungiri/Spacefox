@@ -4,6 +4,130 @@
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+.main{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #5F6F52;
+    border-radius: 50%;
+    box-shadow: -24vw -44vh 2px 2px #fff,
+    38vw -4vh 0px 0px #283a7f,
+    -20vw -48vh 1px 2px #940909,
+    -39vw 38vh 3px 1px #089f58,
+    -42vw -11vh 0px 3px #8c0869,
+    12vw 15vh 3px 3px #be2249,
+    42vw 6vh 3px 2px #a7be11,
+    -8vw 9vh 0px 2px #f6ce04,
+    34vw -38vh 1px 0px #ec730f,
+    -17vw 45vh 3px 1px #066b7d,
+    22vw -36vh 3px 2px #fff,
+    -42vw 24vh 1px 0px #066b7d,
+    -24vw -44vh 1px 2px #940909,
+    -39vw 33vh 3px 1px #089f58,
+    -42vw -8vh 0px 3px #8c0869,
+    19vw 11vh 3px 3px #be2249,
+    36vw 4vh 3px 2px #a7be11,
+    -8vw 15vh 0px 2px #f6ce04,
+    28vw -32vh 1px 0px #ec730f,
+    -17vw 18vh 3px 1px #066b7d,
+    29vw -13vh 3px 2px #fff,
+    -44vw 4vh 1px 0px #fff;
+    animation: rotate 60s linear infinite;
+    background-size: 100%, 200%;
+    background-position: center, center;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+    100%{
+        transform: rotate(360deg) scale(10);
+    }
+}
+
+
+ #layer1, #layer2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #layer1 {
+    background-image: url;
+    color: #b5b5e3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* didalam form */
+.word{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+
+}
+
+form {
+width: 25%;
+height: 200px;
+border-radius: 10px;
+padding: 10px 80px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+/* input text dan submit */
+input {
+background-color: #00000000;
+font-size: 24px;
+margin: 10px;
+padding: 5px;
+border-radius: 5px;
+border: none;
+text-align: center;
+color: white;
+}
+
+.button {
+padding: 15px 25px;
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #fff;
+background-color: #4f12d2;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+margin-top: 25px;
+}
+
+.button:hover {background-color: #1242e0}
+
+.button:active {
+background-color: #0c408e;
+box-shadow: 0 5px #666; 
+transform: translateY(4px);
+}
+
+/* asdfasfsadfsadfdsaf */
+@font-face {
+	font-family: customFonts;
+	src:url(GothamBoldItalic.ttf);
+}
+
+@font-face {
+	font-family: scoreFonts;
+	src:url(YapariTrial-Bold.ttf);
+}
+
 .background {
 	height: 100vh;
 	width: 100vw;
@@ -13,6 +137,11 @@
     -o-background-size: cover;
     background-size: cover;
 }
+#arrow {
+	font-size: 150%;
+	font-weight: 300;
+}
+
 .bird {
 	height: 100px;
 	width: 221px;
@@ -31,37 +160,58 @@
 .message {
 	position: absolute;
 	z-index: 10;
-	color: black;
+	color: #CC3366;
 	top: 30%;
 	left: 50%;
-	font-size: 4em;
+	font-family: customFonts;
+	font-size: 1.7em;
 	transform: translate(-50%, -50%);
 	text-align: center;
+	border-radius: 60%;
 }
+
+.message img {
+	height: 70%;
+	width: 70%;
+	margin-bottom: 20px;
+}
+
 .messageStyle{
-	background: white;
+	background-color: rgba(0, 0, 75, 0.45);
 	padding: 30px;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	border-radius: 5%;
 }
+
 .score {
 	position: fixed;
 	z-index: 10;
-	height: 10vh;
-	font-size: 10vh;
+	height: 5vh;
+	font-family: scoreFonts;
+	font-size: 5vh;
 	font-weight: 100;
-	color: white;
+	color: #CC3366;
 	-webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
 	top: 0;
 	left: 0;
 	margin: 10px;
-	font-family: Arial, Helvetica, sans-serif;
+	
+}
+
+.score_title {
+	font-family: scoreFonts;
 }
 .score_val {
-	color: gold;
+	font-family: scoreFonts;
+	color: #CC3366;
 	font-weight: bold;
 }
+
+#SpaceFoxWord {
+	margin-bottom: 2rem;
+	z-index: 3;
+}
+
 @media only screen and (max-width: 1080px) {
     .message{
 		font-size: 50px;
