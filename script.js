@@ -8,10 +8,37 @@ let background = document.querySelector('.background').getBoundingClientRect();
 let score_val = document.querySelector('.score_val');
 let message = document.querySelector('.message');
 let score_title = document.querySelector('.score_title');
+let hapus = document.getElementById("layer1")
+
+
 
 let game_state = 'Start';
 img.style.display = 'none';
+message.style.display = 'none';
 message.classList.add('messageStyle');
+//asdflkjalsakjfdlk
+// message.classList.remove('messageStyle');
+// message.innerHTML = '';
+//laskjdflkjasdlkfja
+
+
+let player = localStorage.getItem('player')
+
+let button = document.querySelector(".button")
+button.addEventListener("click", () => {
+    player = document.querySelector(".player").value
+    localStorage.setItem('player', player)
+    
+  });
+
+  console.log(player);
+
+if (player !== null) {
+    console.log("masuk1");
+    hapus.style.display = "none"
+    message.style.removeProperty("display")
+    localStorage.clear();
+}
 
 document.addEventListener('keydown', (e) => {
     
@@ -51,7 +78,7 @@ function play(){
                     } else {
                         kategori = 'TEACH ME SENPAI';
                     }
-                    message.innerHTML = '<img src="2023Artboard_3_copySPACE_SHIP.png">' + '<br>' + 'NAMA' + ', SKOR ANDA: ' + score_val.innerHTML + '<br>'+ '<br>' + kategori + "!!!";
+                    message.innerHTML = '<img src="2023Artboard_3_copySPACE_SHIP.png">' + '<br>' + player + ', SKOR ANDA: ' + score_val.innerHTML + '<br>'+ '<br>' + kategori + "!!!";
                     message.classList.add('messageStyle');
                     img.style.display = 'none';
                     sound_die.play();
