@@ -78,7 +78,7 @@ function play(){
                     } else {
                         kategori = 'TEACH ME SENPAI';
                     }
-                    message.innerHTML = '<img src="2023Artboard_3_copySPACE_SHIP.png">' + '<br>' + player + ', SKOR ANDA: ' + score_val.innerHTML + '<br>'+ '<br>' + kategori + "!!!";
+                    message.innerHTML = '<img src="2023Artboard_3_copySPACE_SHIP.png">' + '<br>' + player.toUpperCase() + ', SKOR ANDA: ' + score_val.innerHTML + '<br>'+ '<br>' + kategori + "!!!";
                     message.classList.add('messageStyle');
                     img.style.display = 'none';
                     sound_die.play();
